@@ -1,0 +1,493 @@
+*{
+    font-family: montserrat;
+    margin: 0em;
+}
+
+body{
+    margin: 0em;
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+body p{
+    font-size: 14px;
+}
+
+.navBar{
+    width: 100%;
+    position:fixed;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.title span{
+    color: orange;
+}
+
+.navigation ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation ul a{
+    display: inline-block;
+    margin: 0em 2em 0em 2em;
+    text-decoration: none;
+    color: white;
+    padding: 0.3em;
+    width: 70px;
+    transition: 1s;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.navigation ul a:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menuIcon{
+    display: none;
+}
+
+.banner{
+    background-image: url("images/back2.jpg");
+    background-repeat: none;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bannerColor{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text{
+    color: white;
+    text-align: center;
+    padding: 10% 0em 10% 0em;
+}
+
+.textContainer span{
+    color: #f58f2a;
+}
+
+.textContainer h1{
+    font-size: 3em;
+}
+
+.textContainer p{
+    margin-top: 5%;
+    line-height: 2em;
+}
+
+.textContainer a{
+    display: inline-block;
+    margin-top: 10%;
+    margin-bottom: 6%;
+    border-radius: 30px;
+    width: 20%;
+    color: orange;
+    text-decoration: none;
+    padding: 1%;
+    background-color: none;
+    border: solid 1px orange;
+}
+
+.textContainer a:hover{
+    background-color: #f58b1b;
+    color: white;
+    transition: 1s;
+}
+.exeSection{
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.exeContainer span{
+    color: orange;
+}
+
+.exeContainer{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+
+.exeperience, .projectsComplete, .awards{
+    margin: 0em 1em 0em 1em;
+}
+
+.services{
+    margin-top: 4em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.services h1{
+    font-size: 30px;
+    color: gray;
+    margin-left: 0.5em;
+}
+
+.servicesContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0.5em;
+    padding: 0.7em;
+    text-align: justify;
+    background-color: white;
+    display: inline-block;
+}
+
+.service p{
+    color: dimgray;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+#servicesTitle{
+    
+}
+
+.service h4{
+    color: orange;
+    margin-bottom: 0.9em;
+}
+
+.serviceIcon{
+    display: flex;
+}
+
+.serviceIcon img{
+    width: 20px;
+    height: 20px;
+    opacity: 70%;
+    margin-right: 20px;
+}
+
+.orderButton{
+    display: flex;
+    justify-content: center;
+}
+
+.orderButton a{
+    color: black;
+    background-color: none;
+    border: solid 1px orange;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0.5em;
+    border-radius: 50px;
+    width: 70px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.orderButton a:hover{
+    background-color: orange;
+    color: white;
+    transition: 0.5s;
+}
+.gallery{
+    background-color: whitesmoke;
+    margin-top: 4em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.gallery h1{
+    margin-left: 0.5em;
+    color: dimgray;
+    font-size: 30px;
+}
+
+.gallery p{
+    color: dimgray;
+}
+
+.galleryContainer{
+    display: flex;
+}
+
+.picture{
+    flex: 1;
+    margin: 0.5em;
+    padding: 0.7em;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.picture img{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.pictureIcon{
+    display: flex;
+}
+
+.pictureIcon img{
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    line-height: 0em;
+}
+
+.seeMore{
+    text-align: right;
+}
+
+.aboutUs{
+    margin-top: 4em;
+    border-radius: 10px;
+    padding-top: 1em;
+    color: dimgray;
+}
+
+.aboutUs h1{
+    margin-left: 0.5em;
+    text-align: center;
+    color: #f58f2a;
+    font-size: 30px;
+}
+
+.aboutContainer{
+    padding: 1em;
+    text-align: center;
+
+}
+
+.contactSection{
+    margin-top: 4em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding-top: 1em;
+}
+
+.contactSection h1{
+    color: #f58f2a;
+    text-align: center;
+    font-size: 30px;
+}
+
+.getIntouch{
+    padding: 2em;
+}
+
+.getIntouch p{
+    line-height:2;
+}
+
+.getIntouchIcons{
+    display: flex;
+}
+
+.getIntouchIcons img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    opacity: 70%;
+}
+
+.form{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.form form{
+    padding: 1em;
+    width: 70%;
+    border-radius: 10px;
+    color: dimgray;
+}
+
+.form input{
+    width: 90%;
+    border-radius: 5px;
+    padding: 1em;
+    border: solid 1px gray;
+    outline: none;
+    font-size: 15px;
+    color: gray;
+}
+
+.form textarea{
+    font-size: 15px;
+    color: gray;
+    outline: none;
+    width: 90%;
+    padding: 1em;
+}
+
+.form button{
+    background-color: #1bc708;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    width: 95%;
+}
+
+.footer{
+    background: url("images/footer.jpg");
+    color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.footerColor{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.footerContainer section{
+    background-color: ;
+    padding: 0.5em;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.footerAddress{
+    text-align: center;
+}
+
+.footerLinks{
+    text-align: right;
+}
+
+.footerLinks a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
+}
+
+.footerIcons{
+    display: flex;
+}
+
+.footerIcons img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.subButton{
+    background-color: #db2016;
+    padding: 0.5em;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.copyright{
+    padding: 1em;
+    text-align: center;
+    color: black;
+}
+
+
+
+
+
+@media(max-width: 900px){
+* p{
+    font-size: 12px;
+    line-height: 1.5;
+}
+.navBar{
+    width: 93%;
+}
+
+.navigation ul{
+    display: none;
+}
+
+.menuIcon{
+    display: block;
+}
+
+.menuIcon img{
+    width: 30px;
+}
+
+.banner{
+    background-image: url("images/mobile.jpg");
+}
+
+.textContainer{
+    padding: 1em;
+}
+
+.textContainer a{
+    padding: 10px;
+    width: 150px;
+}
+
+.exeContainer{
+    flex-direction: column;
+}
+
+.exeperience, .projectsComplete, .awards{
+    margin-top: 1em;
+    text-align: center;
+}
+
+.service{
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.servicesContainer{
+    flex-direction: column;
+}
+
+.galleryContainer{
+    flex-direction: column;
+}
+
+.picture{
+    margin-top: 2em;
+}
+
+.aboutContainer{
+    padding: 0em 2em 0em 2em;
+}
+
+.footerContainer{
+    flex-direction: column;
+}
+
+.footerContainer section{
+    text-align: left;
+}
+
+.subButton{
+        
+}
+
+.footer{
+    background: url("images/mobileFooter.jpg");
+    color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+}
