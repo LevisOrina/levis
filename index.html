@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script  type="text/javascript" src="jquery-3.7.1.min.js"></script>
     <title>Levis Graphix</title>
 </head>
 <body>
@@ -13,29 +15,49 @@
         </section>
         <nav class="navigation">
             <ul>
-                <a href="index.html">Home</a>
+                <a href="#banner">Home</a>
                 <a href="#services">Services</a>
-                <a href="#gallery">Gallery</a>
+                <a href="#gallery">Portfolio</a>
                 <a href="#about">About</a>
                 <a href="#contacts">Contact</a>
             </ul>
         </nav>
         <section class="menuIcon">
-            <a href=""></a><img src="images/menu.png">
+            <img src="images/menu.png" class="menuButton">
         </section>
     </header>
 
-    <section class="banner">
+    <section class="mobileNav">
+        <section id="mobileNavContainer">
+            <ul>
+                <a href="#banner" class="mobileLink">Home</a>
+                <a href="#services" class="mobileLink">Services</a>
+                <a href="#gallery" class="mobileLink">Portfolio</a>
+                <a href="#about" class="mobileLink">About</a></li>
+                <a href="#teamSection" class="mobileLink">Our Team</a>
+                <a href="#contacts" class="mobileLink">Contact</a>
+            </ul>
+        </section>
+    </section>
+
+    <section class="banner" id="banner">
         <section class="bannerColor">
             <section class="text">
                 <section class="textContainer">
                     <h1>You Dream, <span>We Design<span></h1>
                     <p>At Levis Graphix, your story is our canvas. We listen, we design, we deliver graphics<br> that amplify your message and achieve your goals.</p>
+                    
+                    <section class="bannerAnime">
+                        <h3> < We Do <span id="text-container">Poster Design </span> /> </h3>
+                    </section>
+                    
+
                     <a href="#contacts">Lets talk</a>
                 </section>
             </section>
         </section>
     </section>
+
     <section class="exeSection">
         <section class="exeContainer">
             <section class="exeperience">
@@ -49,10 +71,11 @@
             </section>
         </section>
     </section>
+
     <section class="services" id="services">
         <br>
         <section>
-            <h1 id="servicesTitle">Our Services</h1>
+            <h1>Our Services</h1>
         </section>
             <section class="servicesContainer">
                 <section class="service">
@@ -63,7 +86,7 @@
                     
                     <p>We design bold, attention-grabbing posters in Nairobi that deliver clear, powerful messages and drive results.</p>
                     <section class="orderButton">
-                        <a href="#contacts">ORDER</a>
+                        <a href="#contacts">Order</a>
                     </section>
                 </section>
                 <section class="service">
@@ -74,7 +97,7 @@
                     
                     <p>We craft unique logos for Nairobi brands, building recognition, communicating values, and making lasting impressions.</p>
                     <section class="orderButton">
-                        <a href="#contacts">ORDER</a>
+                        <a href="#contacts">Order</a>
                     </section>
                 </section>
                 <section class="service">
@@ -84,47 +107,23 @@
                     </section>
                     <p>We build powerful brands in Nairobi through strategic visual identities, messaging, and audience-driven experiences.</p>
                     <section class="orderButton">
-                        <a href="#contacts">ORDER</a>
+                        <a href="#contacts">Order</a>
                     </section>   
                 </section>  
             </section>
             <br>      
     </section>
+
     <section class="gallery" id="gallery">
         <br>
-        <section>
-            <h1>Our Work</h1>
-        </section>
         <section class="galleryContainer">
-            <section class="picture">
-                <section class="pictureIcon">
-                    <img src="images/tick.png">
-                    <p>Holiday Posters</p>
-                </section>
-                <img src="images/poster1.jpg">
-            </section>
-
-            <section class="picture">
-                <section class="pictureIcon">
-                    <img src="images/tick.png">
-                    <p>Product Adverts</p>
-                </section>
-                <img src="images/poster2.png">
-            </section>
-
-            <section class="picture">
-                <section class="pictureIcon">
-                    <img src="images/tick.png">
-                    <p>Event Posters</p>  
-                </section>
-                <img src="images/poster3.png">
-            </section>
-        </section>
-        <section class="seeMore">
-            <a href="#Gallery">See more ></a>
+            <h1>Some Of Our Work</h1>
+            <section id="galleryContainer"></section>
+            <a href="#">View More ></a>
         </section>
         <br>
     </section>
+
     <section>
         <section class="aboutUs" id="about">
             <br>
@@ -137,6 +136,12 @@
             <br>
         </section>
     </section>
+
+    <section class="teamSection" id="teamSection">
+        <h1>Our Team</h1>
+        <section class="teamContainer" id="teamContainer"></section>
+    </section>
+
     <section>
         <section class="contactSection" id="contacts">
             <br>
@@ -152,72 +157,68 @@
                     </section>
                     <section class="getIntouchIcons">
                         <img src="images/call.png">
-                        <p>+254 102 050 090 | +254729 787 550</p>
+                        <p>+254 102 050 090</p>
                     </section>
                     <section class="getIntouchIcons">
                         <img src="images/location.png">
-                        <p>P.O BOX 17249 - 00510</p>
-                    </section>
-                    <section class="getIntouchIcons">
-                        <img src="images/location.png">
-                        <p>Nairobi, Kenya</p>
+                        <p>Nairobi, Kenya</p><br>
                     </section>      
                 </section>
                 <section class="form">
                     <form method="POST">
-                        <b><p>GET INTOUCH</p></b><br>
+                        <h3>GET INTOUCH</h3>
                         <p>FULL NAME</p>
                         <input type="text" name="name" placeholder="Full Name">
-                        <br><br>
                         <p>EMAIL ADDRESS</p>
                         <input type="email" name="email" placeholder="example@mail.com">
-                        <br><br>
                         <p>MESSAGE</p>
-                        <textarea id="message" name="message" rows="4" placeholder="Type message. . ."></textarea><br><br>
-                        <button>MESSAGE</button>
+                        <textarea id="message" name="message" rows="4" placeholder="Type message. . ."></textarea>
+                        <button>SEND</button>
                 </form>
                 </section>
             </section>
             <br>
         </section>
     </section>
-
+    <section class="mediaIcons">
+        <section class="mediaIconsContainer">
+            <img src="images/instagramIcon.png"/>
+            <img src="images/xIcon.png"/>
+            <img src="images/facebookIcon.png"/>
+        </section>
+    </section>
     <section class="footer">
         <section class="footerColor">
+            <br><br>
             <section class="footerContainer">
-                <section class="footerContacts">
-                    <section class="footerIcons">
-                        <img src="images/email.png">
-                        <p>levisgraphix@gmail.com</p>
-                    </section>
-                     <section class="footerIcons">
-                        <img src="images/call.png">
-                        <p>+254 102 050 090 | +254729 787 550</p>
-                    </section> 
-                    <section class="footerIcons">
-                        <img src="images/location.png">
-                        <p>P.O BOX 17249 - 00510</p>
-                    </section> 
-                    <section class="footerIcons">
-                        <img src="images/location.png">
-                        <p>Nairobi, Kenya</p>
-                    </section>
-                </section>
-                <section class="footerAddress">
-                    <p>P.O BOX 17249 - 00510</p>
-                    <p>Nairobi, Kenya</p><br>
-                        <h1 class="subButton">SUBSCRIBE</h1>         
-                </section>
-                <section class="footerLinks">
-                    <a href="">Downloads</a><br>
-                    <a href="">Projects</a>
-                </section>
+                <p>P.O BOX 17249 - 00510</p>
+                <p>Nairobi, Kenya</p>
+                <h1 class="subButton">SUBSCRIBE</h1>         
+            </section>
+            <section class="copyright">
+                <p>Copyright © 2025, Levis Graphix Ltd</p> <br>
+            </section>
         </section>
-        <section class="copyright">
-            <p>Copyright © 2025 Levis Graphix Ltd</p>
-        </section>
-        </section>
-        
     </section>
+
+<script src="scripts.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $(".menuButton").click(function(){
+        $("#mobileNavContainer").toggle("slow"); // You can use "fast", "slow", or milliseconds for animation speed
+      });
+    });
+
+    $(document).ready(function(){
+      $(".mobileLink").click(function(){
+        $("#mobileNavContainer").toggle("slow"); // You can use "fast", "slow", or milliseconds for animation speed
+      });
+    });
+</script>
+
+<script type="text/javascript" src="services.js"></script>
+<script type="text/javascript" src="staff.js"></script>
+
 </body>
 </html>

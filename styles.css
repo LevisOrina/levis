@@ -1,6 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     font-family: montserrat;
     margin: 0em;
+    padding: 0;
 }
 
 body{
@@ -14,14 +19,26 @@ body p{
 }
 
 .navBar{
-    width: 100%;
-    position:fixed;
-    background-color:rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.navigation{
+    width: 100%;
+}
+
+.title{
+    width: 50%;
+    margin: 0.5em;
+    color: white;
+}
+
+.title:hover{
+    cursor: pointer;
 }
 
 .title span{
@@ -29,31 +46,79 @@ body p{
 }
 
 .navigation ul{
-    display: flex;
-    justify-content: space-between;
+    float: right;
+    margin: 0.5em;
 }
 
 .navigation ul a{
-    display: inline-block;
-    margin: 0em 2em 0em 2em;
-    text-decoration: none;
     color: white;
-    padding: 0.3em;
-    width: 70px;
-    transition: 1s;
-    border-radius: 5px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 80px;
+    margin: 0em 1em 0em 1em;
+    line-height: 2;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .navigation ul a:hover{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(250, 250, 250, 0.4);
+    transition: 0.3s;
 }
 
 .menuIcon{
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.menuIcon img{
+    display: inline-block;
+    float: right;
+    margin: 0.5em;
+    width: 25px;
+    cursor: pointer;
+}
+
+.menuIcon:hover{
+    background-color: rgba(250, 250, 250, 0.4);
+    transition: 0.3s;
+}
+
+.mobileNav{
+    position: fixed;
+    margin-top: 50px;
+    width: 100%;
+}
+
+#mobileNavContainer{
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
     display: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#mobileNavContainer ul a{
+    color: whitesmoke;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3;
+    list-style: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#mobileNavContainer ul a:hover{
+    background-color: rgba(250, 250, 250, 0.4);
+    transition: 0.3s;
 }
 
 .banner{
+    display: inline-block;
+    width: 100%;
     background-image: url("images/back2.jpg");
     background-repeat: none;
     background-size: 100%;
@@ -68,7 +133,7 @@ body p{
 .text{
     color: white;
     text-align: center;
-    padding: 10% 0em 10% 0em;
+
 }
 
 .textContainer span{
@@ -76,6 +141,8 @@ body p{
 }
 
 .textContainer h1{
+    display: inline-block;
+    margin-top: 3em;
     font-size: 3em;
 }
 
@@ -86,25 +153,37 @@ body p{
 
 .textContainer a{
     display: inline-block;
-    margin-top: 10%;
+    margin-top: 5em;
+    line-height: 2;
     margin-bottom: 6%;
     border-radius: 30px;
     width: 20%;
     color: orange;
     text-decoration: none;
-    padding: 1%;
     background-color: none;
     border: solid 1px orange;
+    transition: 0.3s;
 }
 
 .textContainer a:hover{
     background-color: #f58b1b;
     color: white;
-    transition: 1s;
+    transition: 0.3s;
 }
+
+.bannerAnime h3{
+    margin-top: 50px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.bannerAnime span{
+    font-family: monospace;
+    font-size: 20px;
+}
+
 .exeSection{
-    margin-top: 2em;
-    padding: 1em;
+    margin-top: 30px;
 }
 
 .exeContainer span{
@@ -122,46 +201,51 @@ body p{
 }
 
 .services{
-    margin-top: 4em;
+    margin-top: 30px;
     background-color: whitesmoke;
     border-radius: 10px;
-    padding: 1em;
 }
 
 .services h1{
     font-size: 30px;
     color: gray;
     margin-left: 0.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .servicesContainer{
     display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
     justify-content: space-between;
 }
 
 .service{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin: 0.5em;
-    padding: 0.7em;
-    text-align: justify;
+    border-radius: 5px;
+    margin: 0em 0.5em 0em 0.5em;
+    text-align: center;
     background-color: white;
     display: inline-block;
+    transition: 0.3s;
+}
+
+.service:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
 .service p{
     color: dimgray;
     line-height: 1.5;
     font-size: 12px;
-}
-
-#servicesTitle{
-    
+    margin: 0em 1em 2em 1em;
 }
 
 .service h4{
     color: orange;
-    margin-bottom: 0.9em;
+    margin:1em;
 }
 
 .serviceIcon{
@@ -172,7 +256,7 @@ body p{
     width: 20px;
     height: 20px;
     opacity: 70%;
-    margin-right: 20px;
+    margin: 1em 0em 1em 1em;
 }
 
 .orderButton{
@@ -188,74 +272,81 @@ body p{
     font-size: 12px;
     padding: 0.5em;
     border-radius: 50px;
-    width: 70px;
+    width: 80px;
     text-align: center;
-    margin-top: 10px;
+    margin: 1em 0em 1em 0em;
 }
 
 .orderButton a:hover{
     background-color: orange;
     color: white;
-    transition: 0.5s;
+    transition: 0.2s;
 }
+
 .gallery{
-    background-color: whitesmoke;
-    margin-top: 4em;
-    padding: 1em;
-    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.gallery h1{
-    margin-left: 0.5em;
-    color: dimgray;
+#galleryContainer{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+#galleryContainer img{
+    display: inline-block;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+.galleryContainer h1{
     font-size: 30px;
-}
-
-.gallery p{
     color: dimgray;
-}
-
-.galleryContainer{
-    display: flex;
-}
-
-.picture{
-    flex: 1;
     margin: 0.5em;
-    padding: 0.7em;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
-    background-color: white;
-    border-radius: 10px;
+    margin-top: 30px;
 }
 
-.picture img{
-    margin-top: 10px;
+.galleryContainer a{
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    color: dimgray;
+    margin: 1em;
+    transition: 0.2s;
+}
+
+.galleryContainer a:hover{
+    color: orange;
+    transition: 0.2s;
+}
+
+.galleryCard{
+    display: inline-block;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
     width: 100%;
+    transition: 0.3s;
 }
 
-.pictureIcon{
-    display: flex;
+.galleryCard:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
-.pictureIcon img{
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-    line-height: 0em;
-}
-
-.seeMore{
-    text-align: right;
+.galleryCard p{
+    color: dimgray;
+    margin: 1em;
 }
 
 .aboutUs{
-    margin-top: 4em;
     border-radius: 10px;
     padding-top: 1em;
     color: dimgray;
 }
 
 .aboutUs h1{
+    margin-top: 30px;
     margin-left: 0.5em;
     text-align: center;
     color: #f58f2a;
@@ -263,26 +354,76 @@ body p{
 }
 
 .aboutContainer{
-    padding: 1em;
     text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 2;
+}
 
+.teamSection{
+    display: inline-block;
+    background-color:whitesmoke;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.teamSection:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.teamSection h1{
+    display: block;
+    margin-left: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    text-align: center;
+    color: dimgray;
+}
+
+.teamContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.staffCard{
+    margin: 1em;
+}
+
+.staffCard img{
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.staffCard p{
+    margin: 0.5em;
+    font-size: 10px;
+    color: dimgray;
+    text-align: center;
 }
 
 .contactSection{
-    margin-top: 4em;
-    background-color: whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 10px;
-    padding-top: 1em;
 }
 
 .contactSection h1{
-    color: #f58f2a;
+    margin-top: 40px;
+    color: dimgray;
     text-align: center;
     font-size: 30px;
 }
 
 .getIntouch{
-    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .getIntouch p{
@@ -290,53 +431,96 @@ body p{
 }
 
 .getIntouchIcons{
-    display: flex;
+    display: inline-block;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.getIntouchIcons:hover{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
 .getIntouchIcons img{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    opacity: 70%;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;    
+    opacity: 30%;
+}
+
+.getIntouchIcons p{
+    text-align: center;
 }
 
 .form{
-    padding: 1em;
     display: flex;
     justify-content: center;
 }
 
 .form form{
-    padding: 1em;
-    width: 70%;
+    width: 60%;
     border-radius: 10px;
     color: dimgray;
+    border: solid 1px gray;
 }
 
 .form input{
-    width: 90%;
+    display: inline-block;
+    width: 95%;
     border-radius: 5px;
-    padding: 1em;
-    border: solid 1px gray;
+    border: solid 0.1em gray;
     outline: none;
     font-size: 15px;
     color: gray;
+    line-height: 3;
+    text-align: center;
+}
+
+.form h3{
+    color: orange;
+    text-align: center;
+}
+
+.form *{
+    margin: 0.5em 1em 0.5em 1em;
 }
 
 .form textarea{
     font-size: 15px;
     color: gray;
     outline: none;
-    width: 90%;
-    padding: 1em;
+    width: 95%;
 }
 
 .form button{
     background-color: #1bc708;
     border-radius: 5px;
     border: none;
-    padding: 1em;
     width: 95%;
+    line-height: 3;
+    transition: 0.3s;
+}
+
+.form button:hover{
+    background-color: #f58b1b;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mediaIconsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.mediaIconsContainer img{
+    width: 20px;
+    margin: 20px;
 }
 
 .footer{
@@ -347,94 +531,75 @@ body p{
 }
 
 .footerColor{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .footerContainer{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em;
-}
-
-.footerContainer section{
-    background-color: ;
-    padding: 0.5em;
-    line-height: 1.5;
-    width: 100%;
-}
-
-.footerAddress{
     text-align: center;
-}
-
-.footerLinks{
-    text-align: right;
-}
-
-.footerLinks a{
-    text-decoration: none;
-    color: white;
-    padding: 0.5em;
-}
-
-.footerIcons{
-    display: flex;
-}
-
-.footerIcons img{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .subButton{
+    margin-top: 20px;
     background-color: #db2016;
-    padding: 0.5em;
     border-radius: 5px;
     display: inline-block;
+    line-height: 2;
+    width: 150px;
+    animation: subscribe 1s ease-in-out infinite;
+}
+
+.subButton:hover{
+    cursor: pointer;
 }
 
 .copyright{
-    padding: 1em;
+    margin-top: 20px;
     text-align: center;
-    color: black;
+    color: white;
 }
 
+@keyframes subscribe{
+    0%{
+        background-color: #db2016;
+        color: white;
+    }
+    50%{
+        background-color: white;
+        color: dimgray;
+    }
+    100%{
+        background-color: #db2016;
+        color: white;
+    }
+}
 
-
-
-
-@media(max-width: 900px){
+/*MOBILE DEVICES*/
+@media(max-width: 960px){
 * p{
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.5;
-}
-.navBar{
-    width: 93%;
 }
 
 .navigation ul{
+    background-color: red;
     display: none;
 }
 
-.menuIcon{
-    display: block;
+.title{
+    width: 80%;
 }
 
-.menuIcon img{
-    width: 30px;
+#mobileNavContainer{
+    height: 50vh;
 }
 
 .banner{
     background-image: url("images/mobile.jpg");
 }
 
-.textContainer{
-    padding: 1em;
-}
-
 .textContainer a{
-    padding: 10px;
     width: 150px;
 }
 
@@ -448,7 +613,6 @@ body p{
 }
 
 .service{
-    padding: 2em;
     margin-top: 2em;
 }
 
@@ -456,28 +620,60 @@ body p{
     flex-direction: column;
 }
 
-.galleryContainer{
-    flex-direction: column;
+.servicesContainer p{
+    font-size: 14px;
 }
 
-.picture{
-    margin-top: 2em;
+.service{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#galleryContainer{
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.galleryCard{
+    width: auto;
 }
 
 .aboutContainer{
-    padding: 0em 2em 0em 2em;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.footerContainer{
+.getIntouch{
     flex-direction: column;
+    margin-top: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.footerContainer section{
-    text-align: left;
+.getIntouchIcons{
+    box-shadow: none;
+    margin: 0;
 }
 
-.subButton{
-        
+.getIntouchIcons:hover{
+    box-shadow: none;
+}
+
+.form form{
+    width: 100%;
+}
+
+.form input{
+    width: 90%;
+}
+
+.form textarea{
+    width: 90%;
+}
+
+.form button{
+    width: 91%;
 }
 
 .footer{
@@ -486,8 +682,5 @@ body p{
     background-repeat: no-repeat;
     background-size: 100%;
 }
-
-
-
 
 }
